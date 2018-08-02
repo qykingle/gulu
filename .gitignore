@@ -73,11 +73,5 @@ typings/
 
 # Serverless directories
 .serverless
-
-.idea/dbnavigator.xml
-.idea/gulu.iml
-.idea/inspectionProfiles/
-.idea/misc.xml
-.idea/modules.xml
-.idea/workspace.xml
+.idea
 #package-lock.json
