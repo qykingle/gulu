@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/qykingle/gulu/issues"
   },
-  "homepage": "https://github.com/qykingle/gulu#readme"
+  "homepage": "https://github.com/qykingle/gulu#readme",
+  "dependencies": {
+    "vue": "^2.5.17"
+  }
 }
