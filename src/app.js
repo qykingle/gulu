@@ -3,7 +3,9 @@ import Button from './button'
 import Icon from './icon'
 import ButtonGroup from './button-group'
 import chai from 'chai'
+import spies from 'chai-spies'
 
+chai.use(spies)
 const expect = chai.expect
 
 Vue.component('g-button', Button)
@@ -91,13 +93,9 @@ new Vue({
     }
   })
   gButton.$mount()
-  gButton.$on('click', function () {
-    console.log(1)
-  })
+  let spy = chai.spy(function() {})
+  gButton.$on('click', spy)
   let button = gButton.$el
   button.click()
-  expect(order).to.eq('1')
-  // 清理掉
-  gButton.$el.remove()
-  gButton.$destroy()
+  expect(spy).to.have.been.called()
 }
